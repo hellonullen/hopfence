@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>HopFence.AspNetCore</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>NulleN - Kadircan Üredi</Authors>
+    <Company>kadircanuredi.com.tr</Company>
+    <Description>ASP.NET Core adapter and diagnostic probe middleware for HopFence Reverse Proxy Diagnostics &amp; Security Testing Tool.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/hellonullen/hopfence</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hellonullen/hopfence.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\HopFence.Core\HopFence.Core.csproj" />
+  </ItemGroup>
+
+</Project>

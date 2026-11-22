@@ -1,0 +1,30 @@
+{
+  "name": "@hopfence/express",
+  "version": "1.0.0",
+  "description": "HopFence reverse proxy diagnostics and security testing adapter for Express.js",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "hopfence",
+    "reverse-proxy",
+    "proxy-testing",
+    "security",
+    "express",
+    "diagnostics",
+    "x-forwarded-for"
+  ],
+  "author": "NulleN - Kadircan Üredi <hellonullen@gmail.com> (https://kadircanuredi.com.tr)",
+  "homepage": "https://github.com/hellonullen/hopfence",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellonullen/hopfence.git",
+    "directory": "packages/hopfence-express"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

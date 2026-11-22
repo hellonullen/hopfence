@@ -1,0 +1,13 @@
+{
+  "name": "example-express-nginx",
+  "version": "1.0.0",
+  "description": "HopFence Express.js sample behind Nginx reverse proxy",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@hopfence/express": "file:../../packages/hopfence-express",
+    "express": "^4.19.2"
+  }
+}

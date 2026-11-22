@@ -1,0 +1,52 @@
+name: HopFence CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-dotnet:
+    name: Build & Test .NET 9.0
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET SDK 9.0
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore HopFence.sln
+
+    - name: Build solution
+      run: dotnet build HopFence.sln --configuration Release --no-restore
+
+    - name: Run Unit & Integration Tests
+      run: dotnet test HopFence.sln --configuration Release --no-build --verbosity normal --logger "trx;LogFileName=test_results.trx"
+
+    - name: Test HopFence CLI
+      run: |
+        dotnet run --project src/HopFence.Cli -- version
+        dotnet run --project src/HopFence.Cli -- init --output test-hopfence.yml
+
+  test-node:
+    name: Test Express Package (Node.js)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Run Express Package Tests
+      working-directory: packages/hopfence-express
+      run: npm test

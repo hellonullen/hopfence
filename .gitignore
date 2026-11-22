@@ -1,0 +1,31 @@
+# Build and release folders
+bin/
+obj/
+out/
+dist/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test results and artifacts
+TestResults/
+*.trx
+*.html
+*.xml
+test-hopfence.yml
+
+# User and IDE files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS generated
+.DS_Store
+Thumbs.db

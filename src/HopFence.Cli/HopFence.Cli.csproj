@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>HopFence.Cli</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>NulleN - Kadircan Üredi</Authors>
+    <Company>kadircanuredi.com.tr</Company>
+    <Description>Command-line interface for HopFence Reverse Proxy Diagnostics &amp; Security Testing Tool.</Description>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>hopfence</ToolCommandName>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/hellonullen/hopfence</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hellonullen/hopfence.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HopFence.Core\HopFence.Core.csproj" />
+    <ProjectReference Include="..\HopFence.Reporting\HopFence.Reporting.csproj" />
+  </ItemGroup>
+
+</Project>

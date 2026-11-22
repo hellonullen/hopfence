@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>HopFence.Core</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>NulleN - Kadircan Üredi</Authors>
+    <Company>kadircanuredi.com.tr</Company>
+    <Description>Core diagnostics and security testing engine for reverse proxies and forwarded headers.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/hellonullen/hopfence</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hellonullen/hopfence.git</RepositoryUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet" Version="16.3.0" />
+  </ItemGroup>
+
+</Project>
